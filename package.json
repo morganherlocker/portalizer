@@ -23,6 +23,8 @@
   "dependencies": {
     "classifier": "~0.1.0",
     "ddg": "0.0.3",
-    "async": "~0.2.10"
+    "async": "~0.2.10",
+    "lodash": "~2.4.1",
+    "csv": "~0.3.7"
   }
 }
