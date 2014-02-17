@@ -1,0 +1,27 @@
+{
+  "name": "portalizer",
+  "version": "0.0.0",
+  "description": "a tool for finding data portals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morganherlocker/portalizer.git"
+  },
+  "keywords": [
+    "open",
+    "data",
+    "portals"
+  ],
+  "author": "morganherlocker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/morganherlocker/portalizer/issues"
+  },
+  "dependencies": {
+    "classifier": "~0.1.0",
+    "ddg": "0.0.3"
+  }
+}
