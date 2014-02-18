@@ -2,12 +2,11 @@ var _ = require('lodash'),
     async = require('async'),
     csv = require('csv'),
     fs = require('fs'),
-    ddg = require('ddg'),
     classifier = require('classifier'),
     google = require('google');
 
-var portals = '"Location", "Link", "Title", "Description"',
-    locationFile = './statesTest.csv',
+var portals = 'Location, Link, Title, Description',
+    locationFile = './states.csv',
     outputFile = './portals.csv'
 
 console.log('Gathering Locations')
@@ -39,7 +38,7 @@ function getPortal(name, done){
       portals += '\n"'+name+'",'
       portals += '"'+links[i].link+'",'
       portals += '"'+links[i].title+'",'
-      portals += '"'+links[i].description+'"'
+      portals += '"'+links[i].description.split('"').join('')+'"'
     }
     done()
   });
