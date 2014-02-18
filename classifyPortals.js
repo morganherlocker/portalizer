@@ -38,9 +38,9 @@ function saveOutput(portals){
     portalsCsv += '\n"'+portal[0].split(',').join('')+'", '
     portalsCsv += '"'+portal[1].split(',').join('')+'", '
     portalsCsv += '"'+portal[2].split(',').join('')+'", '
-    portalsCsv += '"'+portal[3].split('\n').join('')
-      .split('-').join('')
-      .split(',').join('')+'", '
+    //portalsCsv += '"'+portal[3].split('\n').join('')
+    //  .split('-').join('')
+    //  .split(',').join('')+'", '
     portalsCsv += '"'+portal[4]+'" '
   })
   fs.writeFileSync(classifiedFile, portalsCsv)
