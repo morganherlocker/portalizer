@@ -28,7 +28,6 @@ csv().from.path(portalsFile).to.array(function(portals){
         classified.push(portal)
       }
     })
-    //console.log(classified)
     saveOutput(classified)
   })
 })
@@ -36,11 +35,12 @@ csv().from.path(portalsFile).to.array(function(portals){
 function saveOutput(portals){
   portalsCsv = 'Location, Link, Title, Description, isPortal'
   _.each(portals, function(portal){
-    console.log(portal[4])
-    portalsCsv += '\n"'+portal[0]+'", '
-    portalsCsv += '"'+portal[1]+'", '
-    portalsCsv += '"'+portal[2]+'", '
-    portalsCsv += '"'+portal[3]+'", '
+    portalsCsv += '\n"'+portal[0].split(',').join('')+'", '
+    portalsCsv += '"'+portal[1].split(',').join('')+'", '
+    portalsCsv += '"'+portal[2].split(',').join('')+'", '
+    portalsCsv += '"'+portal[3].split('\n').join('')
+      .split('-').join('')
+      .split(',').join('')+'", '
     portalsCsv += '"'+portal[4]+'" '
   })
   fs.writeFileSync(classifiedFile, portalsCsv)
